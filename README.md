@@ -1,3 +1,3 @@
 # Acoustic-DL
 
-## Music/Audio/Voice/Speech Source Seperation
+## Music/Audio/Voice/Speech Source Separation
