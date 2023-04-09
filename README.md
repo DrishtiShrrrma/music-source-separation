@@ -21,3 +21,6 @@ Waveform Domain Architectures:
 - 
 
 
+![image](https://user-images.githubusercontent.com/129742046/230777568-c2ba40fa-d839-4300-9ba3-f3bc29eea57d.png)
+
+
