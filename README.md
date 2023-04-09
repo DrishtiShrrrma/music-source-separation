@@ -17,7 +17,6 @@ Waveform Domain Architectures:
 
 ## 1. ![DEMUCS](https://arxiv.org/abs/1911.13254): (Deep Extractor for Music Sources)
 
-- Uses a deep encoder-decoder structure for audio source separation.
 - Demucs takes a stereo mixture as input and outputs a stereo estimate for each source (C = 2).
 - It is an encoder/decoder architecture composed of a **convolutional encoder, a bidirectional LSTM, and a convolutional decoder, with the encoder and decoder
 linked with skip U-Net connections.** 
