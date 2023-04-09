@@ -2,9 +2,9 @@
 
 ## Music/Audio/Voice/Speech Source Separation
 
-1. Demucs
-2. Hybrid Demucs
-3. Demucs with Transformers
-4. Band-split RNN
+- Demucs
+- Hybrid Demucs
+- Demucs with Transformers
+- Band-split RNN
 
-1. 
+1. DEMUCS
