@@ -17,12 +17,14 @@ Waveform Domain Architectures:
 
 ## 1. ![DEMUCS](https://arxiv.org/abs/1911.13254): (Deep Extractor for Music Sources)
 
+Motivation: Conv-Tasnet, originally designed for monophonic speech separation and audio sampled at 8 kHz, was adapted to the task of stereophonic music source separation for
+audio sampled at 44.1 kHz. While Conv-Tasnet separates with a high accuracy the different sources, artifacts were observed when listening to the generated audio: a constant broadband noise, hollow instruments attacks or even missing parts. They were especially noticeable on the drums and bass sources.
+
+DEMUCS Description:
 - Waveform-to-Waveform model
 - Demucs takes a stereo mixture as input and outputs a stereo estimate for each source (C = 2).
 - It is an encoder/decoder architecture composed of a **convolutional encoder, a bidirectional LSTM, and a convolutional decoder, with the encoder and decoder
 linked with skip U-Net connections.** 
-- Conv-Tasnet, originally designed for monophonic speech separation and audio sampled at 8 kHz, was adapted to the task of stereophonic music source separation for
-audio sampled at 44.1 kHz.
 - With proper data augmentation, Demucs surpasses all state-of-the-art architecture in the waveform or spectrogram domain by at least 0.3 dB of SDR.
 - However, their is no clear winner between waveform and spectrogram domain models, as the former seems to dominate for the bass and drums sources, while the latter obtain the best performance on the vocals and other sources, as measured both by objective metrics and human evaluations.
 - Spectrogram domain models have an advantage when the content is mostly harmonic and fast changing, while for sources without harmonicity (drums) or with strong and emphasized attack regimes (bass), waveform domain will better preserve the structure of the music source.
