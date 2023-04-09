@@ -20,7 +20,7 @@ Waveform Domain Architectures:
 **Motivation:** Conv-Tasnet, originally designed for monophonic speech separation and audio sampled at 8 kHz, was adapted to the task of stereophonic music source separation for
 audio sampled at 44.1 kHz. While Conv-Tasnet separates with a high accuracy the different sources, artifacts were observed when listening to the generated audio: a constant broadband noise, hollow instruments attacks or even missing parts. They were especially noticeable on the drums and bass sources.
 
-**DEMUCS Description:**
+**DEMUCS Key Features:**
 - Waveform-to-Waveform model
 - Similar to Conv-Tasnet, Demucs directly operates on the raw input waveform and generates a waveform for each source. In other words, Demucs takes a stereo mixture as input and outputs a stereo estimate for each source (C = 2).
 - It is an encoder/decoder architecture composed of a **convolutional encoder, a bidirectional LSTM, and a convolutional decoder (based on wide transposed convolutions with large strides), with the encoder and decoder linked with skip U-Net connections.** 
