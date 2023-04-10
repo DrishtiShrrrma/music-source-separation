@@ -72,7 +72,7 @@ Colab : [Click here](https://colab.research.google.com/drive/1dC9nVxk3V_VPjUADsn
 - On the MusDB HQ benchark, overall, a 1.4 dB improvement of the Signal-To-Distortion (SDR) was observed across all sources as measured on the MusDB HQ dataset, with an overall quality rated at 2.83 out of 5 (2.36 for the non hybrid Demucs), and absence of contamination at 3.04 (against 2.37 for the non hybrid Demucs).
 - 
 
-**Limitation:**
+**Limitations:**
 - For all its gain, one limitation of this approach is the increased complexity of the U-Net encoder/decoder, requiring careful alignmement of the temporal and spectral signals through well shaped convolutions.
 
 ## X. Conv-Tasnet:
