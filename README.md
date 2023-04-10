@@ -33,6 +33,9 @@ Waveform Domain Architectures:
 - In fact, for the bass source, Demucs is the first model to surpass the IRM oracle, with 7.6 SDR. The pitch/tempo shift augmentation was found to be useful, which lead to a gain of 0.4 points of SDR, in particular for a model with a large number of parameters like Demucs, while it can be detrimental to Conv-TasNet.
 - There is no clear winner between waveform and spectrogram domain models, as the former seems to dominate for the bass and drums sources, while the latter obtain the best performance on the vocals and other sources, as measured both by objective metrics and human evaluations.
 - Spectrogram domain models have an advantage when the content is mostly harmonic and fast changing, while for sources without harmonicity (drums) or with strong and emphasized attack regimes (bass), waveform domain will better preserve the structure of the music source.
+- One of the main drawbacks of the Demucs model when compared to other architecture is its large model size, more than 1014MB, against 42MB for Conv-TasNet. The size can be reduced either by reducing the initial number of channels (32 or 48 channels), which will improve both the model size, as well as reduce the computational complexity of the model, or using the DiffQ quantization technique
+  - getting to 32 channels will lead to a decrease of 0.2 dB in performance.
+  - Quantization reduces the model size down to 120MB without any loss of SDR, which is still more than the 42MB of Conv-Tasnet, but close to 10x improvement over the uncompressed baseline.
 
 
 
