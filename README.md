@@ -23,7 +23,7 @@ Waveform Domain Architectures:
 - Similar to Conv-Tasnet, Demucs directly operates on the raw input waveform and generates a waveform for each source. In other words, Demucs takes a stereo mixture as input and outputs a stereo estimate for each source (C = 2).
 - It is an encoder/decoder architecture composed of a **convolutional encoder, a bidirectional LSTM, and a convolutional decoder (based on wide transposed convolutions with large strides), with the encoder and decoder linked with skip U-Net connections.** 
 - The other critical features of the approach are increasing the number of channels exponentially with depth, gated linear units as activation function which also allow for masking, and a new initialization scheme.
-- With proper data augmentation, Demucs surpasses all state-of-the-art architecture in the waveform or spectrogram domain by at least 0.3 dB of SDR. 
+- Experiments on the MusDB dataset show that, with proper data augmentation, Demucs surpasses all state-of-the-art architecture in the waveform or spectrogram domain by at least 0.3 dB of SDR. 
 - Inspired by models for music synthesis rather than masking approaches.
 
 ![image](https://user-images.githubusercontent.com/129742046/230777568-c2ba40fa-d839-4300-9ba3-f3bc29eea57d.png)
