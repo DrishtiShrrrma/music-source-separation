@@ -55,10 +55,11 @@ Colab : [Click here](https://colab.research.google.com/drive/1dC9nVxk3V_VPjUADsn
 
 **Key Features:**
 
+ Demucs architecture to perform hybrid  source separation. 
 
-
- - Performs end-to-end hybrid source separation by letting the model decide which domain is best suited for each source, and even combining both. 
+ - Performs end-to-end hybrid waveform/spectrogram domain source separation by letting the model decide which domain is best suited for each source, and even combining both. 
  - This architecture **comes with additional improvements, such as compressed residual branches, local attention or singular value regularization, and chunked biLSTM, and most importantly, a novel hybrid spectrogram/temporal domain U-Net structure, with parallel temporal and spectrogram branches, that merge into a common core.**
+ - The original U-Net architecture is extended to provide two parallel branches: one in the time (temporal) and one in the frequency (spectral) domain.
  - These changes translated into strong improvements of the overall quality and absence of bleeding between sources as measured by human evaluations.
  - Won the Music Demixing Challenge (MDX) 2021 organized by Sony. 
 
