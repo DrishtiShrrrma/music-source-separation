@@ -23,13 +23,18 @@ Waveform Domain Architectures:
 - Similar to Conv-Tasnet, Demucs directly operates on the raw input waveform and generates a waveform for each source. In other words, Demucs takes a stereo mixture as input and outputs a stereo estimate for each source (C = 2).
 - It is an encoder/decoder architecture composed of a **convolutional encoder, a bidirectional LSTM, and a convolutional decoder (based on wide transposed convolutions with large strides), with the encoder and decoder linked with skip U-Net connections.** 
 - The other critical features of the approach are increasing the number of channels exponentially with depth, gated linear units as activation function which also allow for masking, and a new initialization scheme.
-- With proper data augmentation, Demucs surpasses all state-of-the-art architecture in the waveform or spectrogram domain by at least 0.3 dB of SDR.
-- However, their is no clear winner between waveform and spectrogram domain models, as the former seems to dominate for the bass and drums sources, while the latter obtain the best performance on the vocals and other sources, as measured both by objective metrics and human evaluations.
-- Spectrogram domain models have an advantage when the content is mostly harmonic and fast changing, while for sources without harmonicity (drums) or with strong and emphasized attack regimes (bass), waveform domain will better preserve the structure of the music source.
+- With proper data augmentation, Demucs surpasses all state-of-the-art architecture in the waveform or spectrogram domain by at least 0.3 dB of SDR. 
 - Inspired by models for music synthesis rather than masking approaches.
--   
 
 ![image](https://user-images.githubusercontent.com/129742046/230777568-c2ba40fa-d839-4300-9ba3-f3bc29eea57d.png)
+
+**Results:**
+- While Conv-Tasnet outperforms several existing spectrogram-domain methods, it does suffer from large audio artifacts. On the other hand, with proper augmentation, the Demucs architecture surpasses all existing spectrogram or waveform domain architectures in terms of SDR, with 6.3 points of SDR without extra training data (against 6.0 for the best existing method D3Net), and up to 6.8 with extra training data.
+- In fact, for the bass source, Demucs is the first model to surpass the IRM oracle, with 7.6 SDR. The pitch/tempo shift augmentation was found to be useful, which lead to a gain of 0.4 points of SDR, in particular for a model with a large number of parameters like Demucs, while it can be detrimental to Conv-TasNet.
+- There is no clear winner between waveform and spectrogram domain models, as the former seems to dominate for the bass and drums sources, while the latter obtain the best performance on the vocals and other sources, as measured both by objective metrics and human evaluations.
+- Spectrogram domain models have an advantage when the content is mostly harmonic and fast changing, while for sources without harmonicity (drums) or with strong and emphasized attack regimes (bass), waveform domain will better preserve the structure of the music source.
+
+
 
 
 **Prior Art:**
