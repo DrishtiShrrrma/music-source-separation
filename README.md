@@ -40,16 +40,6 @@ Waveform Domain Architectures:
 ![image](https://user-images.githubusercontent.com/129742046/230889177-6a99c439-a213-401f-bd14-f951c9959d07.png)
 
 
-
-**Prior Art:**
-
-- Conv-Tasnet: Conv-Tasnet beats many existing spectrogram-domain methods, it suffers from significant artifacts.
-
-
-
-
-- 
-
 #### Note:
 - Batch Normalization was not used as  it was found to be detrimental to the model performance.
 - During training, only small audio extracts are given, so that a quiet part or a loud part would be scaled back to an average volume. However, when using entire songs as input, it will most likely contain both quiet and loud parts. The normalization will not map both to the same volume, leading to a difference between training and evaluation.
