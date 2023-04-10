@@ -44,7 +44,9 @@ Waveform Domain Architectures:
 - Batch Normalization was not used as  it was found to be detrimental to the model performance.
 - During training, only small audio extracts are given, so that a quiet part or a loud part would be scaled back to an average volume. However, when using entire songs as input, it will most likely contain both quiet and loud parts. The normalization will not map both to the same volume, leading to a difference between training and evaluation.
 
+## 2. [Hybrid DEMUCS](https://arxiv.org/abs/1911.13254):
 
+Colab : [Click here](https://colab.research.google.com/drive/1dC9nVxk3V_VPjUADsnFu8EiT-xnU1tGH?usp=sharing)
 
 
 ## X. Conv-Tasnet:
