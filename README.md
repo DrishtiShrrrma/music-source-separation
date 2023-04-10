@@ -14,7 +14,7 @@ Waveform Domain Architectures:
 - Band-split RNN
 - Conv-Tasnet
 
-## 1. ![DEMUCS](https://arxiv.org/abs/1911.13254): (Deep Extractor for Music Sources)
+## 1. [DEMUCS](https://arxiv.org/abs/1911.13254): (Deep Extractor for Music Sources)
 
 **Motivation:** Conv-Tasnet, originally designed for monophonic speech separation and audio sampled at 8 kHz, was adapted to the task of stereophonic music source separation for audio sampled at 44.1 kHz. While Conv-Tasnet separates with a high accuracy the different sources, artifacts were observed when listening to the generated audio: a constant broadband noise, hollow instruments attacks or even missing parts. They were especially noticeable on the drums and bass sources.
 
@@ -37,6 +37,7 @@ Waveform Domain Architectures:
   - getting to 32 channels will lead to a decrease of 0.2 dB in performance.
   - Quantization reduces the model size down to 120MB without any loss of SDR, which is still more than the 42MB of Conv-Tasnet, but close to 10x improvement over the uncompressed baseline.
 
+![image](https://user-images.githubusercontent.com/129742046/230889177-6a99c439-a213-401f-bd14-f951c9959d07.png)
 
 
 
