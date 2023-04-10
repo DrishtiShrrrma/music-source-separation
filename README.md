@@ -34,7 +34,7 @@ Waveform Domain Architectures:
 
 **Prior Art:**
 
-- Conv-Tasnet: Conv-Tasnet beats many existing spectrogram-domain methods, it suffers from significant artifacts, as shown by human evaluations. 
+- Conv-Tasnet: Conv-Tasnet beats many existing spectrogram-domain methods, it suffers from significant artifacts.
 
 
 
