@@ -89,9 +89,20 @@ apply the same convolutions as in the temporal branch, but along the frequency d
 
 ## 3. [Hybrid Transformer DEMUCS](https://arxiv.org/pdf/2211.08553.pdf)
 
+**Motivation:**
+- To check whether long range contextual information is useful, or if local acoustic features are sufficient.
+- Attention based Transformers integrate information well over long sequences.
+
+**Model:**
+A hybrid temporal/spectral bi-U-Net based on Hybrid Demucs, where the innermost layers are replaced by a cross-domain Transformer Encoder, using self-attention within one domain, and cross-attention across domains.
+
 
 ![image](https://user-images.githubusercontent.com/129742046/231476512-f3403acd-ecfb-4d9b-9821-1e8583c3412c.png)
 
+**Results:**
+- It performs poorly when trained only on MUSDB, however it outperforms Hybrid Demucs by 0.45 dB of SDR when using 800 extra training songs.
+
+- Using sparse attention kernels to extend its receptive field, and per source fine-tuning, SoTA results were achieved on MUSDB with extra training data, with 9.20 dB of SDR.
 
 ## X. Conv-Tasnet:
 
