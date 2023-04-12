@@ -87,6 +87,12 @@ apply the same convolutions as in the temporal branch, but along the frequency d
 **Limitations:**
 - For all its gain, one limitation of this approach is the increased complexity of the U-Net encoder/decoder, requiring careful alignmement of the temporal and spectral signals through well shaped convolutions.
 
+## 3. [Hybrid Transformer DEMUCS](https://arxiv.org/pdf/2211.08553.pdf)
+
+
+![image](https://user-images.githubusercontent.com/129742046/231476512-f3403acd-ecfb-4d9b-9821-1e8583c3412c.png)
+
+
 ## X. Conv-Tasnet:
 
 This model reuses the masking approach of spectrogram methods but learns the masks jointly with a convolutional front-end, operating directly in the waveform domain for both the inputs and outputs. Conv-Tasnet surpasses both the IRM and IBM oracles.
