@@ -1,4 +1,4 @@
-#Pitch Detection using Traditional Methods Vs ML Methods
+# Pitch Detection using Traditional Methods Vs ML Methods
 
 
 While traditional methods can be effective in many pitch detection scenarios, there are situations where they may face challenges or limitations:
