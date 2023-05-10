@@ -13,7 +13,7 @@ While traditional methods can be effective in many pitch detection scenarios, th
 
 5. Lack of Clear Harmonic Structure: In some audio recordings or musical genres, the pitch information may not be well-defined due to unconventional playing techniques, extended techniques, or non-traditional musical structures. Traditional methods that rely on harmonic analysis may struggle to extract meaningful pitch information in such cases. Machine learning approaches can potentially adapt to these complex and non-conventional pitch structures by learning from a diverse range of examples.
 
-# Do we Detect Pitch of Stems?
+# Do we Perform Pitch Detection on Individual Audio Stems?
 
 Yes, pitch detection can be performed on individual audio stems. In audio production and music analysis, stems refer to the separate audio tracks or elements that make up a complete mix or composition. These stems can include vocals, instruments, drum tracks, or any other isolated audio components.
 
